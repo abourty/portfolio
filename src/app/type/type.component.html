@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #2162b6  ">
+    <a class="navbar-brand" href="/diplome">Abir Cmengui</a>
+    <ul class="navbar-nav">
+    
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navbardrop"
+       data-toggle="dropdown">stage</a>
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="/add-stage">Ajouter</a>
+        <a class="dropdown-item" href="/stage">Lister</a>
+        </div>
+        </li>
+    
+    <li class="nav-item">
+    <a class="nav-link" href="/type" >type de Stages </a>
+    </li>
+  </ul>
+
+
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop"
+     data-toggle="dropdown">[Abir]</a>
+      <div class="dropdown-menu">
+      <a class="dropdown-item" href="">Déconnexion</a>
+      
+      </div>
+      </li>
+      </ul>
+    
+    
+    
+   </nav>
+<div class="container" >
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <h1>Liste des types de stage</h1>
+    <table width="100%">
+    <thead>
+    <tr>
+    <th>code</th>
+    <th>les types</th>
+    <th>action</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let type of tab_type">
+    <tr >
+    <td>{{type.codet}} </td>
+    <td>{{type.typeStg}}</td>
+    <td>
+        <a class="btn btn-danger" (click)="suppType(type)">
+            <img src="../assets/img/delete.png" height="32" width="32">
+        </a>
+        <a class="btn btn-warning" [routerLink]="['/update-type',type.codet]">
+            <img src="../assets/img/edit.png" height="32" width="32"></a>
+    </td>
+
+    </tr>
+    
+    </tbody>
+    </table>
+    <button type="submit"  routerLink="/add-type" class="btn btn-success"> Ajouter </button>
+    </div>
+    </div>
+   </div>
+

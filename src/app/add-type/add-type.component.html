@@ -1,0 +1,21 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un type de stage</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >code</label>
+            <input type="number" [(ngModel)]="newType.codet"
+           name="code" class="form-control">
+            </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >type</label>
+    <input type="text" [(ngModel)]="newType.typeStg"
+   name="code" class="form-control">
+    </div>
+   
+    <button type="submit" (click)="addType()" class="btn btn-success"> Ajouter </button>
+    
+    </form>
+   </div>
+
